@@ -1,0 +1,138 @@
+.page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fef2f2 0%, #fff 50%, #fef2f2 100%);
+  padding: 40px 20px;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  padding: 50px 60px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+.backLink {
+  display: inline-block;
+  color: #d32f2f;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  transition: opacity 0.2s;
+}
+
+.backLink:hover {
+  opacity: 0.7;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #d32f2f;
+  margin: 0 0 8px 0;
+}
+
+.updated {
+  font-size: 13px;
+  color: #999;
+  margin: 0 0 36px 0;
+}
+
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 10px 0;
+}
+
+.section p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.7;
+  margin: 0 0 10px 0;
+}
+
+.section ul {
+  margin: 8px 0 10px 20px;
+  padding: 0;
+}
+
+.section li {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.8;
+}
+
+.section a {
+  color: #d32f2f;
+  text-decoration: none;
+}
+
+.section a:hover {
+  text-decoration: underline;
+}
+
+.backBottom {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.backButton {
+  background: #d32f2f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.backButton:hover {
+  background: #b71c1c;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(211, 47, 47, 0.4);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 30px 24px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .section h2 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 20px 10px;
+  }
+
+  .container {
+    padding: 24px 18px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .backButton {
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+}

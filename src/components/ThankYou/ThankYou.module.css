@@ -1,0 +1,140 @@
+.thankYouPage {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #fef2f2 0%, #fff 50%, #fef2f2 100%);
+  padding: 20px;
+}
+
+.thankYouCard {
+  background: #fff;
+  border-radius: 16px;
+  padding: 60px 70px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  animation: scaleIn 0.5s ease-out;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.checkmark {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #d32f2f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  color: #fff;
+  font-size: 40px;
+  animation: pop 0.4s ease-out 0.3s both;
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #d32f2f;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.5px;
+}
+
+.text {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 12px 0;
+  line-height: 1.6;
+}
+
+.subText {
+  font-size: 14px;
+  color: #888;
+  margin: 0 0 32px 0;
+  line-height: 1.5;
+}
+
+.backButton {
+  background: #d32f2f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.backButton:hover {
+  background: #b71c1c;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(211, 47, 47, 0.4);
+}
+
+.backButton:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .thankYouCard {
+    padding: 40px 30px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .text {
+    font-size: 15px;
+  }
+
+  .checkmark {
+    width: 64px;
+    height: 64px;
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .thankYouCard {
+    padding: 35px 25px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .text {
+    font-size: 14px;
+  }
+
+  .backButton {
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+}
