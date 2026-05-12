@@ -398,20 +398,20 @@ const GrohairLanding = () => {
 
     try {
       const response = await fetch(
-        "https://schoolcommunication-gmdtekepd3g3ffb9.canadacentral-01.azurewebsites.net/api/postMSMSForm/booNewAppoinment11",
+        "https://grohairgloskinthirumazhisai.com/api/email.php",
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Authorization: "Bearer 123",
           },
           body: JSON.stringify({
             name: formData.name,
+            phone: formData.mobile,
             email: formData.email,
-            mobile: formData.mobile,
+            treatment_type: formData.treatment,
+            message: "Appointment booking request from website",
             date: formData.date,
             time: formData.time,
-            treatment: formData.treatment,
           }),
         },
       );
@@ -445,7 +445,7 @@ const GrohairLanding = () => {
 
       console.log("✅ API Response:", data);
 
-      if (!data.error) {
+      if (data.success) {
         // Reset form
         setFormData({
           name: "",
@@ -455,8 +455,6 @@ const GrohairLanding = () => {
           time: "",
           treatment: "",
         });
-        console.log("📬 Email sent from: aradiscovermarketing@gmail.com");
-        console.log("📬 Email sent to: thirumazhisai@adgrohair.com");
         refreshCaptcha();
         // Navigate to thank you page
         navigate("/thank-you");
