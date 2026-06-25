@@ -4,12 +4,21 @@ import styles from "./ThankYou.module.css";
 
 const ThankYou = () => {
   useEffect(() => {
+    if (window.gtag) {
+      window.gtag('event', 'conversion', {
+        send_to: 'AW-17991355765/-_pTCOvtosUcEPWa-YJD',
+        value: 1.0,
+        currency: 'INR'
+      });
+    }
+
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
-      'event': 'conversion',
-      'value': 500.0,
-      'currency': 'INR'
+      event: 'conversion',
+      value: 500.0,
+      currency: 'INR'
     });
+
     // Meta Pixel - track Lead event on thank you page
     if (window.fbq) {
       window.fbq('track', 'Lead');
